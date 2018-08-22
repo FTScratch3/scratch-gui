@@ -154,5 +154,19 @@ export default [
         ),
         featured: true,
         disabled: true
+    },
+    {
+        name: 'RoboTXT',
+        extensionId: 'ftxt',
+        iconURL: wedoImage, // TODO
+        description: (
+            <FormattedMessage
+                defaultMessage="Control your RoboTXT Controller"
+                description="Control your RoboTXT Controller"
+                id="gui.extension.ftxt.description"
+            />
+        ),
+        featured: true,
+        disabled: false
     }
 ];
