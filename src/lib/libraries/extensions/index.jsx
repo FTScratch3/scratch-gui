@@ -167,6 +167,17 @@ export default [
             />
         ),
         featured: true,
-        disabled: false
+        disabled: false,
+        launchDeviceConnectionFlow: true,
+        deviceImage: ev3DeviceImage, // TODO
+        smallDeviceImage: ev3MenuImage, // TODO
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting. Make sure the FTScratchTXT.exe is running."
+                description="Message to help people connect to their EV3. Must note the PIN should be 1234."
+                id="gui.extension.txt.connectingMessage"
+            />
+        ),
+        helpLink: 'https://scratch.mit.edu/ev3' // TODO
     }
 ];
