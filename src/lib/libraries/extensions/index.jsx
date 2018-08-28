@@ -156,13 +156,13 @@ export default [
         disabled: true
     },
     {
-        name: 'RoboTXT',
+        name: 'Robotics TXT Controller',
         extensionId: 'ftxt',
         iconURL: wedoImage, // TODO
         description: (
             <FormattedMessage
-                defaultMessage="Control your RoboTXT Controller"
-                description="Control your RoboTXT Controller"
+                defaultMessage="Control your Robotics TXT Controller"
+                description="Control your Robotics TXT Controller"
                 id="gui.extension.ftxt.description"
             />
         ),
@@ -174,7 +174,7 @@ export default [
         connectingMessage: (
             <FormattedMessage
                 defaultMessage="Connecting. Make sure the FTScratchTXT.exe is running."
-                description="Message to help people connect to their EV3. Must note the PIN should be 1234."
+                description="Message to help people connect to their Robotics TXT Controller."
                 id="gui.extension.txt.connectingMessage"
             />
         ),
