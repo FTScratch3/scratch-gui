@@ -13,6 +13,11 @@ import microbitDeviceImage from './device-connection/microbit/microbit-illustrat
 import microbitMenuImage from './device-connection/microbit/microbit-small.svg';
 import ev3DeviceImage from './device-connection/ev3/ev3-hub-illustration.svg';
 import ev3MenuImage from './device-connection/ev3/ev3-small.svg';
+import wedoDeviceImage from './device-connection/wedo/wedo-illustration.svg';
+import wedoMenuImage from './device-connection/wedo/wedo-small.svg';
+import wedoButtonImage from './device-connection/wedo/wedo-button-illustration.svg';
+import txtImage from './device-connection/ftxt/txt_controller.png';
+import txtImageSmall from './device-connection/ftxt/txt_controller_small.png';
 
 export default [
     {
@@ -105,6 +110,7 @@ export default [
         featured: true,
         disabled: false,
         launchDeviceConnectionFlow: true,
+        useAutoScan: false,
         deviceImage: microbitDeviceImage,
         smallDeviceImage: microbitMenuImage,
         connectingMessage: (
@@ -130,6 +136,7 @@ export default [
         featured: true,
         disabled: false,
         launchDeviceConnectionFlow: true,
+        useAutoScan: false,
         deviceImage: ev3DeviceImage,
         smallDeviceImage: ev3MenuImage,
         connectingMessage: (
@@ -153,12 +160,25 @@ export default [
             />
         ),
         featured: true,
-        disabled: true
+        disabled: false,
+        launchDeviceConnectionFlow: true,
+        useAutoScan: true,
+        deviceImage: wedoDeviceImage,
+        smallDeviceImage: wedoMenuImage,
+        deviceButtonImage: wedoButtonImage,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their WeDo."
+                id="gui.extension.wedo2.connectingMessage"
+            />
+        ),
+        helpLink: 'https://scratch.mit.edu/wedo'
     },
     {
         name: 'Robotics TXT Controller',
         extensionId: 'ftxt',
-        iconURL: wedoImage, // TODO
+        iconURL: txtImage,
         description: (
             <FormattedMessage
                 defaultMessage="Control your Robotics TXT Controller"
@@ -168,9 +188,28 @@ export default [
         ),
         featured: true,
         disabled: false,
+        useAutoScan: true,
         launchDeviceConnectionFlow: true,
-        deviceImage: ev3DeviceImage, // TODO
-        smallDeviceImage: ev3MenuImage, // TODO
+        connectDialog: {
+            help: {
+                icon0: "", //  TODO
+                text0: (<FormattedMessage
+                        defaultMessage="Make sure that FTScratchTXT.exe is running."
+                        description="Make sure that FTScratchTXT.exe is running."
+                        id="gui.extension.ftxt.help0"
+                    />),
+                icon1: "", //  TODO
+                text1: (<FormattedMessage
+                    defaultMessage="Make sure that your controller is connected to the FTScratchTXT.exe."
+                    description="Make sure that your controller is connected to the FTScratchTXT.exe."
+                    id="gui.extension.ftxt.help1"
+                />),
+            }
+        },
+        hideSearchBluetoothImage: true,
+        deviceButtonImage: txtImageSmall,
+        deviceImage: txtImage,
+        smallDeviceImage: txtImageSmall,
         connectingMessage: (
             <FormattedMessage
                 defaultMessage="Connecting. Make sure the FTScratchTXT.exe is running."
@@ -180,4 +219,4 @@ export default [
         ),
         helpLink: 'https://scratch.mit.edu/ev3' // TODO
     }
-];
+]

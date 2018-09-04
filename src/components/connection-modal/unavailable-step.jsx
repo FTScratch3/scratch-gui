@@ -1,5 +1,6 @@
 import {FormattedMessage} from 'react-intl';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import React from 'react';
 
 import Box from '../box/box.jsx';
@@ -22,15 +23,15 @@ const UnavailableStep = props => (
                     <div className={styles.helpStepImage}>
                         <img
                             className={styles.scratchLinkIcon}
-                            src={scratchLinkIcon}
+                            src={props.messages.help.icon0 || scratchLinkIcon}
                         />
                     </div>
                     <div className={styles.helpStepText}>
-                        <FormattedMessage
+                        { props.messages.help.text0 || <FormattedMessage
                             defaultMessage="Make sure you have Scratch Link installed and running"
                             description="Message for getting Scratch Link installed"
                             id="gui.connection.unavailable.installscratchlink"
-                        />
+                        />}
                     </div>
                 </div>
                 <div className={styles.scratchLinkHelpStep}>
@@ -40,15 +41,15 @@ const UnavailableStep = props => (
                     <div className={styles.helpStepImage}>
                         <img
                             className={styles.scratchLinkIcon}
-                            src={bluetoothIcon}
+                            src={props.messages.help.icon1 || bluetoothIcon}
                         />
                     </div>
                     <div className={styles.helpStepText}>
-                        <FormattedMessage
+                        { props.messages.help.text1 || <FormattedMessage
                             defaultMessage="Check that Bluetooth is enabled"
                             description="Message for making sure Bluetooth is enabled"
                             id="gui.connection.unavailable.enablebluetooth"
-                        />
+                        />}
                     </div>
                 </div>
             </div>
@@ -64,7 +65,7 @@ const UnavailableStep = props => (
                     onClick={props.onScanning}
                 >
                     <img
-                        className={styles.buttonIconLeft}
+                        className={classNames(styles.buttonIconLeft, styles.buttonIconBack)}
                         src={backIcon}
                     />
                     <FormattedMessage
