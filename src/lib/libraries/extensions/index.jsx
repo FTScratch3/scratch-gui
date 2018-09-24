@@ -18,6 +18,8 @@ import wedoMenuImage from './device-connection/wedo/wedo-small.svg';
 import wedoButtonImage from './device-connection/wedo/wedo-button-illustration.svg';
 import txtImage from './device-connection/ftxt/txt_controller.png';
 import txtImageSmall from './device-connection/ftxt/txt_controller_small.png';
+import btsmartImage from './device-connection/ftxt/btsmart.png';
+import btsmartImageSmall from './device-connection/ftxt/btsmart_small.png';
 
 export default [
     {
@@ -215,6 +217,50 @@ export default [
                 defaultMessage="Connecting. Make sure the FTScratchTXT.exe is running."
                 description="Message to help people connect to their Robotics TXT Controller."
                 id="gui.extension.txt.connectingMessage"
+            />
+        ),
+        helpLink: 'https://scratch.mit.edu/ev3' // TODO
+    },
+    {
+        name: 'BTSmart',
+        extensionId: 'ftbtsmart',
+        iconURL: btsmartImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Control your Robotics BTSmart Controller"
+                description="Control your Robotics BTSmart Controller"
+                id="gui.extension.ftbtsmart.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        useAutoScan: true,
+        launchDeviceConnectionFlow: true,
+        connectDialog: {
+            help: {
+                icon0: "", //  TODO
+                text0: (<FormattedMessage
+                        defaultMessage="Make sure that FTScratchBTSmart.exe is running."
+                        description="Make sure that FTScratchBTSmart.exe is running."
+                        id="gui.extension.ftbtsmart.help0"
+                    />),
+                icon1: "", //  TODO
+                text1: (<FormattedMessage
+                    defaultMessage="Make sure that your controller is connected to the FTScratchBTSmart.exe."
+                    description="Make sure that your controller is connected to the FTScratchBTSmart.exe."
+                    id="gui.extension.ftbtsmart.help1"
+                />),
+            }
+        },
+        hideSearchBluetoothImage: true,
+        deviceButtonImage: btsmartImageSmall,
+        deviceImage: btsmartImage,
+        smallDeviceImage: btsmartImageSmall,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting. Make sure the FTScratchBTSmart.exe is running."
+                description="Message to help people connect to their Robotics TXT Controller."
+                id="gui.extension.ftbtsmart.connectingMessage"
             />
         ),
         helpLink: 'https://scratch.mit.edu/ev3' // TODO
