@@ -110,7 +110,7 @@ export default [
             />
         ),
         featured: true,
-        disabled: false,
+        disabled: true,
         launchDeviceConnectionFlow: true,
         useAutoScan: false,
         deviceImage: microbitDeviceImage,
@@ -136,7 +136,7 @@ export default [
             />
         ),
         featured: true,
-        disabled: false,
+        disabled: true,
         launchDeviceConnectionFlow: true,
         useAutoScan: false,
         deviceImage: ev3DeviceImage,
@@ -162,7 +162,7 @@ export default [
             />
         ),
         featured: true,
-        disabled: false,
+        disabled: true,
         launchDeviceConnectionFlow: true,
         useAutoScan: true,
         deviceImage: wedoDeviceImage,
