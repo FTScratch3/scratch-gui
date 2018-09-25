@@ -8,6 +8,8 @@ import translateImage from './translate.png';
 import microbitImage from './microbit.png';
 import ev3Image from './ev3.png';
 import wedoImage from './wedo.png';
+import txtImage from './txt_controller.png';
+import btsmartImage from './btsmart.png';
 
 import microbitDeviceImage from './device-connection/microbit/microbit-illustration.svg';
 import microbitMenuImage from './device-connection/microbit/microbit-small.svg';
@@ -16,9 +18,7 @@ import ev3MenuImage from './device-connection/ev3/ev3-small.svg';
 import wedoDeviceImage from './device-connection/wedo/wedo-illustration.svg';
 import wedoMenuImage from './device-connection/wedo/wedo-small.svg';
 import wedoButtonImage from './device-connection/wedo/wedo-button-illustration.svg';
-import txtImage from './device-connection/ftxt/txt_controller.png';
 import txtImageSmall from './device-connection/ftxt/txt_controller_small.png';
-import btsmartImage from './device-connection/ftxt/btsmart.png';
 import btsmartImageSmall from './device-connection/ftxt/btsmart_small.png';
 
 export default [
