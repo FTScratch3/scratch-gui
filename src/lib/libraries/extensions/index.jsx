@@ -200,7 +200,7 @@ export default [
                         description="Make sure that FTScratchTXT.exe is running."
                         id="gui.extension.ftxt.help0"
                     />),
-                icon1: "", //  TODO
+                icon1: txtImageSmall, //  TODO
                 text1: (<FormattedMessage
                     defaultMessage="Make sure that your controller is connected to the FTScratchTXT.exe."
                     description="Make sure that your controller is connected to the FTScratchTXT.exe."
@@ -244,7 +244,7 @@ export default [
                         description="Make sure that FTScratchBTSmart.exe is running."
                         id="gui.extension.ftbtsmart.help0"
                     />),
-                icon1: "", //  TODO
+                icon1: btsmartImageSmall, //  TODO
                 text1: (<FormattedMessage
                     defaultMessage="Make sure that your controller is connected to the FTScratchBTSmart.exe."
                     description="Make sure that your controller is connected to the FTScratchBTSmart.exe."
