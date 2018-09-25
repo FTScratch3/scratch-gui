@@ -371,7 +371,7 @@ class Blocks extends React.Component {
                 name: extension.name,
                 connectingMessage: extension.connectingMessage,
                 helpLink: extension.helpLink,
-                messages: extension.connectDialog || {help: {}, search: {}}
+                messages: extension.connectDialog || {help: {}, search: {}, disableBTIcon: false}
             }});
         }
     }

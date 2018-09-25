@@ -17,10 +17,10 @@ const ConnectedStep = props => (
                         className={styles.deviceActivityIcon}
                         src={props.deviceImage}
                     />
-                    <img
+                    {!this.props.messages.disableBTIcon && <img
                         className={styles.bluetoothConnectedIcon}
                         src={bluetoothIcon}
-                    />
+                    />}
                 </div>
             </Box>
         </Box>

@@ -206,7 +206,8 @@ export default [
                     description="Make sure that your controller is connected to the FTScratchTXT.exe."
                     id="gui.extension.ftxt.help1"
                 />),
-            }
+            },
+            disableBTIcon: true
         },
         hideSearchBluetoothImage: true,
         deviceButtonImage: txtImageSmall,
@@ -250,7 +251,8 @@ export default [
                     description="Make sure that your controller is connected to the FTScratchBTSmart.exe."
                     id="gui.extension.ftbtsmart.help1"
                 />),
-            }
+            },
+            disableBTIcon: true
         },
         hideSearchBluetoothImage: true,
         deviceButtonImage: btsmartImageSmall,
