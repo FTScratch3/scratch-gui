@@ -97,7 +97,7 @@ export default [
             />
         ),
         featured: true
-    },
+    },/**
     {
         name: 'micro:bit',
         extensionId: 'microbit',
@@ -176,7 +176,7 @@ export default [
             />
         ),
         helpLink: 'https://scratch.mit.edu/wedo'
-    },
+    }, **/
     {
         name: 'Robotics TXT Controller',
         extensionId: 'ftxt',
