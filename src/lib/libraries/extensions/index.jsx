@@ -18,8 +18,12 @@ import ev3MenuImage from './device-connection/ev3/ev3-small.svg';
 import wedoDeviceImage from './device-connection/wedo/wedo-illustration.svg';
 import wedoMenuImage from './device-connection/wedo/wedo-small.svg';
 import wedoButtonImage from './device-connection/wedo/wedo-button-illustration.svg';
+import txtImageBig from './device-connection/ftxt/txt_controller.png';
+import btsmartImageBig from './device-connection/ftxt/btsmart.png';
 import txtImageSmall from './device-connection/ftxt/txt_controller_small.png';
 import btsmartImageSmall from './device-connection/ftxt/btsmart_small.png';
+import txtImageEXE from './device-connection/ftxt/ftscratchtxt_exe.png';
+import btsmartImageEXE from './device-connection/ftxt/ftscratcbtsmart_exe.png';
 
 export default [
     {
@@ -194,7 +198,7 @@ export default [
         launchDeviceConnectionFlow: true,
         connectDialog: {
             help: {
-                icon0: "", //  TODO
+                icon0: txtImageEXE, //  TODO
                 text0: (<FormattedMessage
                         defaultMessage="Make sure that FTScratchTXT.exe is running."
                         description="Make sure that FTScratchTXT.exe is running."
@@ -211,7 +215,7 @@ export default [
         },
         hideSearchBluetoothImage: true,
         deviceButtonImage: txtImageSmall,
-        deviceImage: txtImage,
+        deviceImage: txtImageBig,
         smallDeviceImage: txtImageSmall,
         connectingMessage: (
             <FormattedMessage
@@ -239,7 +243,7 @@ export default [
         launchDeviceConnectionFlow: true,
         connectDialog: {
             help: {
-                icon0: "", //  TODO
+                icon0: btsmartImageEXE, //  TODO
                 text0: (<FormattedMessage
                         defaultMessage="Make sure that FTScratchBTSmart.exe is running."
                         description="Make sure that FTScratchBTSmart.exe is running."
@@ -256,7 +260,7 @@ export default [
         },
         hideSearchBluetoothImage: true,
         deviceButtonImage: btsmartImageSmall,
-        deviceImage: btsmartImage,
+        deviceImage: btsmartImageBig,
         smallDeviceImage: btsmartImageSmall,
         connectingMessage: (
             <FormattedMessage
