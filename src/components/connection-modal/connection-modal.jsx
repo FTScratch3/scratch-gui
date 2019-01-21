@@ -52,8 +52,7 @@ ConnectionModalComponent.propTypes = {
     phase: PropTypes.oneOf(Object.keys(PHASES)).isRequired,
     smallPeripheralImage: PropTypes.string,
     title: PropTypes.string.isRequired,
-    useAutoScan: PropTypes.bool.isRequired,
-    messages: PropTypes.object.isRequired,
+    useAutoScan: PropTypes.bool.isRequired
 };
 
 export {

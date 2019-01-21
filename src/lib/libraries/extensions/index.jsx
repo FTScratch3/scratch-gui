@@ -24,8 +24,6 @@ import microbitMenuImage from './peripheral-connection/microbit/microbit-small.s
 import ev3PeripheralImage from './peripheral-connection/ev3/ev3-hub-illustration.svg';
 import ev3MenuImage from './peripheral-connection/ev3/ev3-small.svg';
 import wedoPeripheralImage from './peripheral-connection/wedo/wedo-illustration.svg';
-import wedoMenuImage from './peripheral-connection/wedo/wedo-small.svg';
-import wedoButtonImage from './peripheral-connection/wedo/wedo-button-illustration.svg';
 import wedoDeviceImage from './peripheral-connection/wedo/wedo-illustration.svg';
 import wedoMenuImage from './peripheral-connection/wedo/wedo-small.svg';
 import wedoButtonImage from './peripheral-connection/wedo/wedo-button-illustration.svg';
@@ -144,113 +142,9 @@ export default [
         internetConnectionRequired: true
     },
     {
-        name: 'Makey Makey',
-        extensionId: 'makeymakey',
-        collaborator: 'JoyLabz',
-        iconURL: makeymakeyImage,
-        insetIconURL: makeymakeyInsetImage,
-        description: (
-            <FormattedMessage
-                defaultMessage="Make anything into a key."
-                description="Description for the 'Makey Makey' extension"
-                id="gui.extension.makeymakey.description"
-            />
-        ),
-        featured: true
-    },
-    {
-        name: 'micro:bit',
-        extensionId: 'microbit',
-        collaborator: 'micro:bit',
-        iconURL: microbitImage,
-        insetIconURL: microbitMenuImage,
-        description: (
-            <FormattedMessage
-                defaultMessage="Connect your projects with the world."
-                description="Description for the 'micro:bit' extension"
-                id="gui.extension.microbit.description"
-            />
-        ),
-        featured: true,
-        disabled: true,
-        bluetoothRequired: true,
-        launchPeripheralConnectionFlow: true,
-        useAutoScan: false,
-        peripheralImage: microbitPeripheralImage,
-        smallPeripheralImage: microbitMenuImage,
-        connectingMessage: (
-            <FormattedMessage
-                defaultMessage="Connecting"
-                description="Message to help people connect to their micro:bit."
-                id="gui.extension.microbit.connectingMessage"
-            />
-        ),
-        helpLink: 'https://scratch.mit.edu/microbit'
-    },
-    {
-        name: 'LEGO MINDSTORMS EV3',
-        extensionId: 'ev3',
-        collaborator: 'LEGO',
-        iconURL: ev3Image,
-        insetIconURL: ev3MenuImage,
-        description: (
-            <FormattedMessage
-                defaultMessage="Build interactive robots and more."
-                description="Description for the 'LEGO MINDSTORMS EV3' extension"
-                id="gui.extension.ev3.description"
-            />
-        ),
-        featured: true,
-        disabled: true,
-        bluetoothRequired: true,
-        launchPeripheralConnectionFlow: true,
-        useAutoScan: false,
-        peripheralImage: ev3PeripheralImage,
-        smallPeripheralImage: ev3MenuImage,
-        connectingMessage: (
-            <FormattedMessage
-                defaultMessage="Connecting. Make sure the pin on your EV3 is set to 1234."
-                description="Message to help people connect to their EV3. Must note the PIN should be 1234."
-                id="gui.extension.ev3.connectingMessage"
-            />
-        ),
-        helpLink: 'https://scratch.mit.edu/ev3'
-    },
-    {
-        name: 'LEGO WeDo 2.0',
-        extensionId: 'wedo2',
-        collaborator: 'LEGO',
-        iconURL: wedoImage,
-        insetIconURL: wedoMenuImage,
-        description: (
-            <FormattedMessage
-                defaultMessage="Build with motors and sensors."
-                description="Description for the 'LEGO WeDo 2.0' extension"
-                id="gui.extension.wedo2.description"
-            />
-        ),
-        featured: true,
-        disabled: true,
-        bluetoothRequired: true,
-        launchPeripheralConnectionFlow: true,
-        useAutoScan: true,
-        peripheralImage: wedoPeripheralImage,
-        smallPeripheralImage: wedoMenuImage,
-        peripheralButtonImage: wedoButtonImage,
-        collaborator: "FT",
-        connectingMessage: (
-            <FormattedMessage
-                defaultMessage="Connecting"
-                description="Message to help people connect to their WeDo."
-                id="gui.extension.wedo2.connectingMessage"
-            />
-        ),
-        helpLink: 'https://scratch.mit.edu/wedo'
-    },
-    {
         name: 'Robotics TXT Controller',
         extensionId: 'ftxt',
-        collaborator: "FT",
+        collaborator: "FHWS",
         iconURL: txtImage,
         description: (
             <FormattedMessage
@@ -297,6 +191,7 @@ export default [
     {
         name: 'BTSmart',
         extensionId: 'ftbtsmart',
+        collaborator: "FHWS",
         iconURL: btsmartImage,
         description: (
             <FormattedMessage

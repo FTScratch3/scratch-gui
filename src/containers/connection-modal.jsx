@@ -116,7 +116,7 @@ class ConnectionModal extends React.Component {
                 smallPeripheralImage={this.state.extension.smallPeripheralImage}
                 title={this.props.extensionId}
                 useAutoScan={this.state.extension.useAutoScan}
-                messages={this.state.extension.messages}
+                messages={this.state.extension.connectDialog}
                 hideSearchBluetoothImage={!!this.state.extension.hideSearchBluetoothImage}
                 vm={this.props.vm}
                 onCancel={this.handleCancel}
