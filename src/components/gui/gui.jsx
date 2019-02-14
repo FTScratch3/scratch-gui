@@ -157,9 +157,6 @@ const GUIComponent = props => {
                 dir={isRtl ? 'rtl' : 'ltr'}
                 {...componentProps}
             >
-                {previewInfoVisible ? (
-                    <PreviewModal />
-                ) : null}
                 {telemetryModalVisible ? (
                     <TelemetryModal
                         onCancel={onTelemetryModalCancel}

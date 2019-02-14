@@ -512,7 +512,7 @@ Blocks.propTypes = {
     isRtl: PropTypes.bool,
     isVisible: PropTypes.bool,
     locale: PropTypes.string,
-    messages: PropTypes.objectOf(PropTypes.string),
+    messages: PropTypes.any, // PropTypes.objectOf(PropTypes.string) - FIXME: Find where this is set
     onActivateColorPicker: PropTypes.func,
     onActivateCustomProcedures: PropTypes.func,
     onOpenConnectionModal: PropTypes.func,
