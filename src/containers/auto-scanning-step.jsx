@@ -69,6 +69,7 @@ class AutoScanningStep extends React.Component {
             <ScanningStepComponent
                 peripheralButtonImage={this.props.peripheralButtonImage}
                 hideSearchBluetoothImage={this.props.hideSearchBluetoothImage}
+                messages={this.props.messages || {}}
                 phase={this.state.phase}
                 title={this.props.extensionId}
                 onRefresh={this.handleRefresh}

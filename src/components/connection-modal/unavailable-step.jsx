@@ -41,7 +41,7 @@ const UnavailableStep = props => (
                     <div className={styles.helpStepImage}>
                         <img
                             className={styles.scratchLinkIcon}
-                            src={props.messages.help.icon1 || bluetoothIcon}
+                            src={(props.messages.help && props.messages.help.icon1) || bluetoothIcon}
                         />
                     </div>
                     <div className={styles.helpStepText}>

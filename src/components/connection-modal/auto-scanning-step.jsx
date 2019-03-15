@@ -32,7 +32,7 @@ const AutoScanningStep = props => (
                                 className={styles.radarBig}
                                 src={radarIcon}
                             />
-                            {props.hideSearchBluetoothImage ?
+                            {!props.hideSearchBluetoothImage ?
                             <img
                                 className={styles.bluetoothCenteredIcon}
                                 src={bluetoothIcon}
@@ -66,18 +66,20 @@ const AutoScanningStep = props => (
         <Box className={styles.bottomArea}>
             <Box className={classNames(styles.bottomAreaItem, styles.instructions)}>
                 {props.phase === PHASES.prescan && (
-                    <FormattedMessage
+                    props.messages.help && props.messages.help.text0 ||
+                    (<FormattedMessage
                         defaultMessage="Have your device nearby, then begin searching."
                         description="Prompt for beginning the search"
                         id="gui.connection.auto-scanning.prescan"
-                    />
+                    />)
                 )}
                 {props.phase === PHASES.pressbutton && (
-                    <FormattedMessage
+                    props.messages.help && props.messages.help.text1 ||
+                    (<FormattedMessage
                         defaultMessage="Press the button on your device."
                         description="Prompt for pushing the button on the device"
                         id="gui.connection.auto-scanning.pressbutton"
-                    />
+                    />)
                 )}
             </Box>
             <Dots
