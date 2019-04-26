@@ -186,7 +186,7 @@ export default [
                 id="gui.extension.txt.connectingMessage"
             />
         ),
-        helpLink: 'https://scratch.mit.edu/ev3' // TODO
+        helpLink: 'https://www.ftscratch3.com/doc/ROBO-TXT/index.html'
     },
     {
         name: 'BTSmart',
@@ -233,6 +233,6 @@ export default [
                 id="gui.extension.ftbtsmart.connectingMessage"
             />
         ),
-        helpLink: 'https://scratch.mit.edu/ev3' // TODO
+        helpLink: 'https://www.ftscratch3.com/doc/BTSmart/index.html'
     }
 ];

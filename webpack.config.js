@@ -85,7 +85,18 @@ const base = {
     optimization: {
         minimizer: [
             new UglifyJsPlugin({
-                include: /\.min\.js$/
+                include: /\.min\.js$/,
+                parallel: true,
+                uglifyOptions: {
+                    mangle1: true,
+                    output: {
+                        comments: false
+                    },
+
+                    compress: {
+                        properties: true,
+                    },
+                },
             })
         ]
     },
