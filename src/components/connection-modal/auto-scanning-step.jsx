@@ -46,8 +46,8 @@ const AutoScanningStep = props => (
                                 src={radarIcon}
                             />
                             <img
-                                className={styles.peripheralButtonImage}
-                                src={props.peripheralButtonImage}
+                                className={styles.connectionTipIcon}
+                                src={props.connectionTipIconURL}
                             />
                         </React.Fragment>
                     )}
@@ -145,9 +145,9 @@ const AutoScanningStep = props => (
 );
 
 AutoScanningStep.propTypes = {
+    connectionTipIconURL: PropTypes.string,
     onRefresh: PropTypes.func,
     onStartScan: PropTypes.func,
-    peripheralButtonImage: PropTypes.string,
     phase: PropTypes.oneOf(Object.keys(PHASES))
 };
 

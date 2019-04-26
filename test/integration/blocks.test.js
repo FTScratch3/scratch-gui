@@ -82,6 +82,15 @@ describe('Working with the blocks', () => {
         // And there should be a monitor visible
         await rightClickText('score', scope.monitors);
         await clickText('slider');
+        await findByXpath("//input[@step='1']");
+
+        // Changing the slider to a decimal should make it have a step size of 0.01
+        await rightClickText('score', scope.monitors);
+        await clickText('change slider range');
+        el = await findByXpath("//input[@name='Maximum value']");
+        await el.sendKeys('.1');
+        await clickButton('OK');
+        await findByXpath("//input[@step='0.01'][@max='100.1']");
 
         const logs = await getLogs();
         await expect(logs).toEqual([]);
@@ -251,5 +260,19 @@ describe('Working with the blocks', () => {
         await clickText('Variables');
         await driver.sleep(500); // Wait for scroll to finish
         await clickText('my\u00A0variable');
+    });
+
+    // Regression test for switching editor tabs causing toolbox to stop updating
+    test('Creating variables after adding extensions updates the toolbox', async () => {
+        await loadUri(uri);
+        await clickText('Costumes');
+        await clickText('Code');
+        await clickText('Variables', scope.blocksTab);
+        await driver.sleep(500); // Wait for scroll
+        await clickText('Make a List');
+        const el = await findByXpath("//input[@name='New list name:']");
+        await el.sendKeys('list1');
+        await clickButton('OK');
+        await clickText('list1', scope.blocksTab);
     });
 });

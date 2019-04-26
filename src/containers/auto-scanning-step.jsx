@@ -67,7 +67,7 @@ class AutoScanningStep extends React.Component {
     render () {
         return (
             <ScanningStepComponent
-                peripheralButtonImage={this.props.peripheralButtonImage}
+                connectionTipIconURL={this.props.connectionTipIconURL}
                 hideSearchBluetoothImage={this.props.hideSearchBluetoothImage}
                 messages={this.props.messages || {}}
                 phase={this.state.phase}
@@ -80,9 +80,9 @@ class AutoScanningStep extends React.Component {
 }
 
 AutoScanningStep.propTypes = {
+    connectionTipIconURL: PropTypes.string,
     extensionId: PropTypes.string.isRequired,
     onConnecting: PropTypes.func.isRequired,
-    peripheralButtonImage: PropTypes.string,
     vm: PropTypes.instanceOf(VM).isRequired,
     hideSearchBluetoothImage: PropTypes.bool.isRequired
 };
