@@ -16,45 +16,14 @@ import text2speechInsetIconURL from './text2speech/text2speech-small.svg';
 import translateIconURL from './translate/translate.png';
 import translateInsetIconURL from './translate/translate-small.png';
 
-import makeymakeyIconURL from './makeymakey/makeymakey.png';
-import makeymakeyInsetIconURL from './makeymakey/makeymakey-small.svg';
-
-import microbitIconURL from './microbit/microbit.png';
-import microbitInsetIconURL from './microbit/microbit-small.svg';
-import microbitConnectionIconURL from './microbit/microbit-illustration.svg';
-import microbitConnectionSmallIconURL from './microbit/microbit-small.svg';
-
-import ev3IconURL from './ev3/ev3.png';
-import ev3InsetIconURL from './ev3/ev3-small.svg';
-import ev3ConnectionIconURL from './ev3/ev3-hub-illustration.svg';
-import ev3ConnectionSmallIconURL from './ev3/ev3-small.svg';
-
-import wedo2IconURL from './wedo2/wedo.png'; // TODO: Rename file names to match variable/prop names?
-import wedo2InsetIconURL from './wedo2/wedo-small.svg';
-import wedo2ConnectionIconURL from './wedo2/wedo-illustration.svg';
-import wedo2ConnectionSmallIconURL from './wedo2/wedo-small.svg';
-import wedo2ConnectionTipIconURL from './wedo2/wedo-button-illustration.svg';
-
-import boostIconURL from './boost/boost.png';
-import boostInsetIconURL from './boost/boost-small.svg';
-import boostConnectionIconURL from './boost/boost-illustration.svg';
-import boostConnectionSmallIconURL from './boost/boost-small.svg';
-import boostConnectionTipIconURL from './boost/boost-button-illustration.svg';
-
-import gdxforIconURL from './gdxfor/gdxfor.png';
-import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
-import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
-import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
-
-
-import txtImage from './txt_controller.png';
-import btsmartImage from './btsmart.png';
-import txtImageBig from './peripheral-connection/ftxt/txt_controller.png';
-import btsmartImageBig from './peripheral-connection/ftxt/btsmart.png';
-import txtImageSmall from './peripheral-connection/ftxt/txt_controller_small.png';
-import btsmartImageSmall from './peripheral-connection/ftxt/btsmart_small.png';
-import txtImageEXE from './peripheral-connection/ftxt/ftscratchtxt_exe.png';
-import btsmartImageEXE from './peripheral-connection/ftxt/ftscratcbtsmart_exe.png';
+import txtImageUrl from './txt_controller.png';
+import btsmartImageUrl from './btsmart.png';
+import txtImageBigUrl from './ftxt/txt_controller.png';
+import btsmartImageBigUrl from './ftxt/btsmart.png';
+import txtImageSmallUrl from './ftxt/txt_controller_small.png';
+import btsmartImageSmallUrl from './ftxt/btsmart_small.png';
+import txtImageExeUrl from './ftxt/ftscratchtxt_exe.png';
+import btsmartImageExeUrl from './ftxt/ftscratcbtsmart_exe.png';
 
 
 export default [
@@ -166,7 +135,7 @@ export default [
         name: 'Robotics TXT Controller',
         extensionId: 'ftxt',
         collaborator: "FHWS",
-        iconURL: txtImage,
+        iconURL: txtImageUrl,
         description: (
             <FormattedMessage
                 defaultMessage="Control your Robotics TXT Controller"
@@ -180,13 +149,13 @@ export default [
         launchPeripheralConnectionFlow: true,
         connectDialog: {
             help: {
-                icon0: txtImageEXE, //  TODO
+                icon0: txtImageExeUrl, //  TODO
                 text0: (<FormattedMessage
                     defaultMessage="Make sure that FTScratchTXT.exe is running."
                     description="Make sure that FTScratchTXT.exe is running."
                     id="gui.extension.ftxt.help0"
                 />),
-                icon1: txtImageSmall, //  TODO
+                icon1: txtImageSmallUrl, //  TODO
                 text1: (<FormattedMessage
                     defaultMessage="Make sure that your controller is connected to the FTScratchTXT.exe."
                     description="Make sure that your controller is connected to the FTScratchTXT.exe."
@@ -197,10 +166,10 @@ export default [
         },
         hideSearchBluetoothImage: true,
         bluetoothRequired: false,
-        peripheralButtonImage: txtImageSmall,
-        peripheralImage: txtImageBig,
-        smallPeripheralImage: txtImageSmall,
-        insetIconURL: txtImageSmall,
+        peripheralButtonImage: txtImageSmallUrl,
+        peripheralImage: txtImageBigUrl,
+        smallPeripheralImage: txtImageSmallUrl,
+        insetIconURL: txtImageSmallUrl,
         connectingMessage: (
             <FormattedMessage
                 defaultMessage="Connecting. Make sure the FTScratchTXT.exe is running."
@@ -214,7 +183,7 @@ export default [
         name: 'BTSmart',
         extensionId: 'ftbtsmart',
         collaborator: "FHWS",
-        iconURL: btsmartImage,
+        iconURL: btsmartImageUrl,
         description: (
             <FormattedMessage
                 defaultMessage="Control your Robotics BTSmart Controller"
@@ -228,13 +197,13 @@ export default [
         launchPeripheralConnectionFlow: true,
         connectDialog: {
             help: {
-                icon0: btsmartImageEXE, //  TODO
+                icon0: btsmartImageExeUrl, //  TODO
                 text0: (<FormattedMessage
                     defaultMessage="Make sure that FTScratchBTSmart.exe is running."
                     description="Make sure that FTScratchBTSmart.exe is running."
                     id="gui.extension.ftbtsmart.help0"
                 />),
-                icon1: btsmartImageSmall, //  TODO
+                icon1: btsmartImageSmallUrl, //  TODO
                 text1: (<FormattedMessage
                     defaultMessage="Make sure that your controller is connected to the FTScratchBTSmart.exe."
                     description="Make sure that your controller is connected to the FTScratchBTSmart.exe."
@@ -245,10 +214,10 @@ export default [
         },
         hideSearchBluetoothImage: true,
         bluetoothRequired: false,
-        peripheralButtonImage: btsmartImageSmall,
-        peripheralImage: btsmartImageBig,
-        smallPeripheralImage: btsmartImageSmall,
-        insetIconURL: btsmartImageSmall,
+        peripheralButtonImage: btsmartImageSmallUrl,
+        peripheralImage: btsmartImageBigUrl,
+        smallPeripheralImage: btsmartImageSmallUrl,
+        insetIconURL: btsmartImageSmallUrl,
         connectingMessage: (
             <FormattedMessage
                 defaultMessage="Connecting. Make sure the FTScratchBTSmart.exe is running."
